@@ -27,7 +27,7 @@ Topologia rețelei este una simplă, dar eficientă, în care fiecare component�
 
 **Diagrama rețelei**:
 
-[Senzor DHT11] ---> [ESP32] ---> [WiFi] ---> [Firebase Database] ---> [Aplicație Web] | | +------------------------+ [Vizualizare grafice]
+`[Senzori DHT11 + BMP180]` ---> `[ESP32]` ---> `[WiFi]` ---> `[Firebase Database]` ---> `[Aplicație Web]`
 
 ## Protocoalele de comunicație
 

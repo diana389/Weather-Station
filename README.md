@@ -49,3 +49,5 @@ Topologia rețelei este una simplă, dar eficientă, în care fiecare component�
   
 - **Aplicația de control**:
   - Aplicația web se conectează la Firebase pentru a prelua datele și le vizualizează sub formă de grafice, oferind utilizatorului o interfață prietenoasă pentru monitorizarea condițiilor ambientale și un control la distanță al dispozitivelor conectate.
+
+  https://github.com/diana389/Weather-Station

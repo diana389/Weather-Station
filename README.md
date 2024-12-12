@@ -34,8 +34,6 @@ Topologia rețelei este una simplă, dar eficientă, în care fiecare component�
 - **WiFi**: Utilizat pentru conectarea ESP32 la internet. Conexiunea se stabilește folosind un SSID și o parolă, iar ESP32 se conectează la rețeaua WiFi pentru a trimite date.
   
 - **HTTP/S (via Firebase REST API)**: Utilizat pentru a trimite datele de la ESP32 către Firebase. De fiecare dată când datele sunt colectate de la senzor, acestea sunt trimise către Firebase pentru stocare.
-  
-- **Firebase Realtime Database**: Baza de date utilizată pentru a stoca și recupera datele în timp real, accesibile de către aplicația web pentru vizualizare.
 
 - **Protocolul SSL/TLS**: Toate datele trimise de la ESP32 către Firebase vor fi criptate folosind SSL/TLS, asigurând o transmisie de date sigură și protejată împotriva accesului neautorizat.
 

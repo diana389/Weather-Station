@@ -22,7 +22,7 @@ Prin acest proiect, se dorește să se creeze o soluție eficientă și accesibi
 Topologia rețelei este una simplă, dar eficientă, în care fiecare componentă joacă un rol bine definit:
 
 - **Senzorii** (DHT11 + BMP180) sunt conectați la ESP32, care colectează datele.
-- **ESP32** se conectează la **WiFi** pentru a transmite datele către un server în cloud, în acest caz **Firebase**.
+- **ESP32** se conectează la **WiFi** pentru a transmite datele către **Firebase**.
 - **Aplicația web** va prelua datele din **Firebase** și le va vizualiza sub formă de grafice.
 
 **Diagrama rețelei**:

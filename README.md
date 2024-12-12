@@ -1,15 +1,15 @@
 # Introducere: Descriere generală a proiectului și obiectivele sale
 
-Proiectul propus reprezintă o stație meteorologică de monitorizare a condițiilor ambientale, bazată pe ESP32 și utilizând senzori de temperatură și umiditate. Acest sistem va colecta și transmite datele în timp real într-o bază de date în cloud (Firebase) pentru a permite analiza evoluției acestora de-a lungul timpului. Obiectivele principale ale proiectului sunt următoarele:
+Proiectul propus reprezintă o stație meteorologică de monitorizare a condițiilor ambientale, bazată pe ESP32 și utilizând senzori de temperatură, presiune și umiditate. Acest sistem va colecta și transmite datele în timp real într-o bază de date în cloud (Firebase) pentru a permite analiza evoluției acestora de-a lungul timpului. Obiectivele principale ale proiectului sunt următoarele:
 
 - **Monitorizarea temperaturii și umidității**: Utilizarea unui senzor DHT11 pentru a măsura temperatura și umiditatea ambientală.
+- **Monitorizarea presiunii**: Utilizarea unui senzor BMP180 pentru a măsura presiunea.
 - **Transmiterea datelor**: Datele colectate vor fi trimise într-o bază de date Firebase, unde vor fi stocate și pot fi accesate pentru vizualizare și analiză.
 - **Aplicație web**: Crearea unei aplicații web care va extrage datele din Firebase și va permite vizualizarea acestora sub formă de grafice, facilitând analiza evoluției condițiilor ambientale.
-- **Automatizare și control**: În viitor, sistemul ar putea fi extins cu actuatori pentru a permite controlul automată al temperaturii sau umidității, de exemplu, prin controlul unui ventilator sau a unui umidificator.
 - **Feedback vizual cu LED RGB**: Utilizarea unui LED RGB care își schimbă culoarea în funcție de temperatura măsurată, oferind un feedback vizual instantaneu despre condițiile ambientale.
-- **Dashboard pentru controlul la distanță**: Implementarea unui dashboard interactiv care va permite utilizatorilor să vizualizeze datele colectate de la senzori și să controleze actuatoarele în timp real. Acesta va include opțiuni pentru activarea/dezactivarea ventilatoarelor, umidificatoarelor sau a altor dispozitive conectate.
+- **Dashboard**: Implementarea unui dashboard interactiv care va permite utilizatorilor să vizualizeze datele colectate de la senzori.
 - **Notificări și alerte**: Sistemul va trimite notificări și alerte în funcție de analiza datelor colectate de la senzori. De exemplu, dacă temperatura depășește o valoare critică, utilizatorul va fi informat printr-o alertă în aplicație.
-- **Interfață responsivă**: Aplicația web și dashboard-ul vor fi optimizate pentru a oferi o experiență de utilizare fluidă pe orice dispozitiv (desktop, mobil), asigurând o accesibilitate ușoară și un control intuitiv al sistemului.
+- **Interfață responsivă**: Aplicația web și dashboard-ul vor fi optimizate pentru a oferi o experiență de utilizare fluidă, asigurând o accesibilitate ușoară și un control intuitiv al sistemului.
 
 Prin acest proiect, se dorește să se creeze o soluție eficientă și accesibilă pentru monitorizarea mediului înconjurător, cu aplicații în domenii precum agricultura de precizie, protecția mediului sau climatizarea spațiilor interioare.
 
@@ -21,7 +21,7 @@ Prin acest proiect, se dorește să se creeze o soluție eficientă și accesibi
 
 Topologia rețelei este una simplă, dar eficientă, în care fiecare componentă joacă un rol bine definit:
 
-- **Senzorii** (DHT11) sunt conectați la ESP32, care colectează datele.
+- **Senzorii** (DHT11 + BMP180) sunt conectați la ESP32, care colectează datele.
 - **ESP32** se conectează la **WiFi** pentru a transmite datele către un server în cloud, în acest caz **Firebase**.
 - **Aplicația web** va prelua datele din **Firebase** și le va vizualiza sub formă de grafice.
 

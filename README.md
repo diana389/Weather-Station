@@ -1,3 +1,6 @@
+# [`WEATHER STATION`](https://github.com/diana389/Weather-Station)
+
+
 # Introducere: Descriere generală a proiectului și obiectivele sale
 
 Proiectul propus reprezintă o stație meteorologică de monitorizare a condițiilor ambientale, bazată pe ESP32 și utilizând senzori de temperatură, presiune și umiditate. Acest sistem va colecta și transmite datele în timp real într-o bază de date în cloud (Firebase) pentru a permite analiza evoluției acestora de-a lungul timpului. Obiectivele principale ale proiectului sunt următoarele:
@@ -48,4 +51,7 @@ Topologia rețelei este una simplă, dar eficientă, în care fiecare component�
 - **Aplicația de control**:
   - Aplicația web se conectează la Firebase pentru a prelua datele și le vizualizează sub formă de grafice, oferind utilizatorului o interfață prietenoasă pentru monitorizarea condițiilor ambientale și un control la distanță al dispozitivelor conectate.
 
-  https://github.com/diana389/Weather-Station
+ # Implementare: Pașii de configurare a hardware-ului, software-ului, și sistemului de alertare și notificare.
+ # Vizualizare și Procesare de Date: Explicarea metodei de procesare și afișare a datelor senzorilor într-o interfață intuitivă.
+ # Securitate: Măsuri de securitate implementate (criptare și autentificare).
+ # Provocări și Soluții: Probleme întâmpinate și soluțiile aplicate.

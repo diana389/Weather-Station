@@ -15,24 +15,29 @@ interface ChartOneProps {
   average: number; // Average value for the chart
 }
 
-const ChartOne: React.FC<ChartOneProps> = ({ title, description, data, average }) => {
+const ChartOne: React.FC<ChartOneProps> = ({
+  title,
+  description,
+  data,
+  average,
+}) => {
   // Extract values and timestamps from the data
-  const values = data.map(item => item.value);
-  const timestamps = data.map(item => item.timestamp);
+  const values = data.map((item) => item.value);
+  const timestamps = data.map((item) => item.timestamp);
 
   // Calculate the interval for displaying 10 labels
   const interval = Math.floor(timestamps.length / 10);
 
   // Create a new array for x-axis labels, setting labels as empty string for most data points
-  const xAxisLabels = timestamps.map((timestamp, index) =>
-    index % interval === 0 ? timestamp : " " // Use empty string instead of null
+  const xAxisLabels = timestamps.map(
+    (timestamp, index) => (index % interval === 9 ? timestamp : " "), // Use empty string instead of null
   );
 
   const options: ApexOptions = {
     legend: {
       show: true,
       position: "top",
-      horizontalAlign: "left"
+      horizontalAlign: "left",
     },
     colors: ["#5750F1"], // Only one color for one line
     chart: {
@@ -40,109 +45,107 @@ const ChartOne: React.FC<ChartOneProps> = ({ title, description, data, average }
       height: 420, // Increase height of the chart
       type: "area",
       toolbar: {
-        show: false
+        show: false,
       },
       margin: {
         top: 20, // Adjust if needed
         right: 20,
         bottom: 100, // Increased bottom margin to give more space for the tilted labels
-        left: 20
-      }
+        left: 20,
+      },
     },
     fill: {
       gradient: {
         opacityFrom: 0.55,
-        opacityTo: 0
-      }
+        opacityTo: 0,
+      },
     },
     responsive: [
       {
         breakpoint: 1024,
         options: {
           chart: {
-            height: 350 // Adjust height for smaller screens
-          }
-        }
+            height: 350, // Adjust height for smaller screens
+          },
+        },
       },
       {
         breakpoint: 1366,
         options: {
           chart: {
-            height: 370 // Adjust height for larger screens
-          }
-        }
-      }
+            height: 370, // Adjust height for larger screens
+          },
+        },
+      },
     ],
     stroke: {
-      curve: "smooth"
+      curve: "smooth",
     },
     markers: {
-      size: 0
+      size: 0,
     },
     grid: {
       strokeDashArray: 5,
       xaxis: {
         lines: {
-          show: false
-        }
+          show: false,
+        },
       },
       yaxis: {
         lines: {
-          show: true
-        }
-      }
+          show: true,
+        },
+      },
     },
     dataLabels: {
-      enabled: false
+      enabled: false,
     },
     tooltip: {
       fixed: {
-        enabled: false
+        enabled: false,
       },
       x: {
-        show: false
+        show: false,
       },
       y: {
         title: {
-          formatter: function() {
+          formatter: function () {
             return "";
-          }
-        }
+          },
+        },
       },
       marker: {
-        show: false
-      }
+        show: false,
+      },
     },
     xaxis: {
       type: "category",
       categories: xAxisLabels, // Use the new x-axis labels array
       axisBorder: {
-        show: false
+        show: false,
       },
       axisTicks: {
-        show: false
+        show: false,
       },
       labels: {
         rotate: -45, // Tilt the labels by -45 degrees
         style: {
           fontSize: "12px",
-          colors: "#000"
-        }
-      }
+          colors: "#000",
+        },
+      },
     },
     yaxis: {
       title: {
         style: {
-          fontSize: "0px"
-        }
-      }
-    }
+          fontSize: "0px",
+        },
+      },
+    },
   };
 
-
   return (
-    <div
-      className="col-span-12 rounded-[10px] bg-white px-7.5 pb-6 pt-7.5 shadow-1 dark:bg-gray-dark dark:shadow-card xl:col-span-7">
+    <div className="col-span-12 rounded-[10px] bg-white px-7.5 pb-6 pt-7.5 shadow-1 dark:bg-gray-dark dark:shadow-card xl:col-span-7">
       <div className="mb-3.5 flex flex-col gap-2.5 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h4 className="text-body-2xlg font-bold text-dark dark:text-white">
@@ -162,8 +165,9 @@ const ChartOne: React.FC<ChartOneProps> = ({ title, description, data, average }
       </div>
 
       {/* Adjusted description position */}
-      <div
-        className="flex flex-col gap-2 text-center xsm:flex-row xsm:gap-0 mt-20"> {/* Added mt-6 to move the description lower */}
+      <div className="mt-6 flex flex-col gap-2 text-center xsm:flex-row xsm:gap-0">
+        {" "}
+        {/* Added mt-6 to move the description lower */}
         <div className="xsm:w-1/2">
           <p className="font-medium">
             {description} {/* Render the description dynamically */}
@@ -174,10 +178,7 @@ const ChartOne: React.FC<ChartOneProps> = ({ title, description, data, average }
         </div>
       </div>
     </div>
-
-
-  )
-    ;
+  );
 };
 
 export default ChartOne;

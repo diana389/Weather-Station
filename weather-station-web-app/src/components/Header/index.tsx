@@ -3,7 +3,6 @@ import DarkModeSwitcher from "./DarkModeSwitcher";
 import DropdownNotification from "./DropdownNotification";
 import DropdownUser from "./DropdownUser";
 import Image from "next/image";
-import SearchForm from "@/components/Header/SearchForm";
 
 const Header = (props: {
   sidebarOpen: string | boolean | undefined;

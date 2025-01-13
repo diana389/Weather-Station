@@ -4,7 +4,7 @@
 
 ## Prerequisites
 - **Arduino IDE** (1.8.19+ or 2.x).
-- USB driver for ESP32: [CH340](https://www.wch.cn/downloads/CH341SER_ZIP.html) or [CP210x](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers).
+- USB driver for ESP32: [CP210x_Windows_Drivers](https://www.silabs.com/documents/public/software/CP210x_Windows_Drivers.zip).
 
 ---
 

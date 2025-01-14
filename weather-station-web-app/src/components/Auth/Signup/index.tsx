@@ -53,14 +53,6 @@ export default function Signup() {
         <SignupWithPassword onSubmit={handleFormSubmit} />
       </div>
 
-      {/* Display the form data after successful submission */}
-      {formData && (
-        <div>
-          <h3>Form Data:</h3>
-          <pre>{JSON.stringify(formData, null, 2)}</pre>
-        </div>
-      )}
-
       {/* Display error message if signup fails */}
       {error && (
         <div className="text-red-500">

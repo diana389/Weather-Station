@@ -12,7 +12,6 @@ export default function Signin() {
   // Handle form submission directly in the parent component
   const handleFormSubmit = (data: { email: string; password: string }) => {
     const { email, password } = data;
-    console.log("Form submitted with data:", data);
 
     // Firebase sign-in attempt
     signInWithEmailAndPassword(auth, email, password)
@@ -38,13 +37,13 @@ export default function Signin() {
         <SigninWithPassword onSubmit={handleFormSubmit} />
       </div>
 
-      {/* Display the form data after submission */}
-      {formData && (
-        <div>
-          <h3>Form Data:</h3>
-          <pre>{JSON.stringify(formData, null, 2)}</pre>
-        </div>
-      )}
+      {/*/!* Display the form data after submission *!/*/}
+      {/*{formData && (*/}
+      {/*  <div>*/}
+      {/*    <h3>Form Data:</h3>*/}
+      {/*    <pre>{JSON.stringify(formData, null, 2)}</pre>*/}
+      {/*  </div>*/}
+      {/*)}*/}
 
       {/* Display any error messages */}
       {error && (
